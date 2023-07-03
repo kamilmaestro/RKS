@@ -2,29 +2,57 @@ import React from "react";
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ImageList from '@mui/material/ImageList';
-import { useMediaQuery, useTheme } from '@mui/material';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import ColoredText from "../components/ColoredText/ColoredText";
+
 
 const PlayersList = ({players = [], columns = 3}) => {
 
   return (
     <ImageList sx={{maxWidth: 1250}} cols={columns}>
       {players.map((player, index) => (
-        <ImageListItem key={index} sx={{marginLeft: 2, marginRight: 2}}>
-          <img
-            src={`${player.src ? player.src : 'player.png'}?w=248&fit=crop&auto=format`}
-            srcSet={`${player.src ? player.src : 'player.png'}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            alt={`${player.name} ${player.lastName}`}
-            loading="lazy"
-          />
-          <ImageListItemBar
-            title={`${player.name} ${player.lastName}`}
-            subtitle={<span>{player.number}</span>}
-            position="below"
-          />
+        <ImageListItem key={index} sx={{margin: 2}}>
+          <Card sx={{ maxWidth: 450, width: 375 }}>
+            <CardMedia
+              sx={{ height: 450 }}
+              image={`${player.src ? player.src : 'player.png'}?w=248&fit=crop&auto=format`}
+              title="green iguana"
+            />
+            <CardContent sx={{display: 'flex'}}>
+              <Typography variant="h5" color="#8F0406" sx={{marginRight: 3, fontSize: 40, lineHeight: 1.05}} >
+                {player.number}
+              </Typography>
+              <Typography gutterBottom variant="h5" sx={{fontSize: 22}} >
+                {`${player.name} ${player.lastName}`}
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small" sx={{color:'#161c2e'}}>Zostań fanem</Button>
+            </CardActions>
+          </Card>
         </ImageListItem>
       ))}
     </ImageList>
   );
 };
+
+{/* <ImageListItem key={index} sx={{marginLeft: 2, marginRight: 2}}>
+<img
+  src={`${player.src ? player.src : 'player.png'}?w=248&fit=crop&auto=format`}
+  srcSet={`${player.src ? player.src : 'player.png'}?w=248&fit=crop&auto=format&dpr=2 2x`}
+  alt={`${player.name} ${player.lastName}`}
+  loading="lazy"
+/>
+<ImageListItemBar
+  title={`${player.name} ${player.lastName}`}
+  subtitle={<span>{player.number}</span>}
+  position="below"
+/>
+</ImageListItem> */}
 
 export default PlayersList;

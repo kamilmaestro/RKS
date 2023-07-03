@@ -14,8 +14,11 @@ import { useMediaQuery, useTheme } from '@mui/material';
 const TeamSquad = () => {
 
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  const columns = isSmallScreen ? 1 : 3;
+  const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const isLargeScreen = useMediaQuery(theme.breakpoints.down('lg'));
+  const columns = isMediumScreen ? 
+    1 
+    : isLargeScreen ? 2 : 3;
 
   return (
     <Layout title={'Kadra'}>
