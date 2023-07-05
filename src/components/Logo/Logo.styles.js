@@ -39,7 +39,7 @@ export const LogoTitle = styled.p`
 export const LogoTitleStyled = styled.span`
     font-weight: 700;
     color: #8F0406;
-    text-shadow: 1px 2px #8F040690;
+    // text-shadow: 1px 2px #8F040690;
 `;
 
 export const LogoSubtitle = styled.p`

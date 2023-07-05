@@ -13,7 +13,7 @@ export const VideoContainer = styled.div`
 
 export const VideoBg = styled.video`
     width: 100%;
-    filter: brightness(25%);
+    filter: brightness(30%);
     min-height: 400px;
     object-fit: cover;
 `;
@@ -25,12 +25,12 @@ export const VideoSrc = styled.source`
 export const IntroContainer = styled.div`
     width: 55%;
     height: 60%;
-    background-color: #00000070;
+    // background-color: #00000070;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid #FFFFFF50;
+    // border: 2px solid #FFFFFF50;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +66,7 @@ export const PageQuote = styled.p`
     letter-spacing: 2px;
     font-family: ${({theme}) => theme.fontPrimary.family};
     font-size: ${({theme}) => theme.fontPrimary.size.l};
-    font-weight: 200;
+    font-weight: 300;
     text-align: center;
     width: 100%;
     white-space: pre-wrap;

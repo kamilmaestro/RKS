@@ -17,17 +17,17 @@ const PlayersList = ({players = [], columns = 3}) => {
     <ImageList sx={{maxWidth: 1250}} cols={columns}>
       {players.map((player, index) => (
         <ImageListItem key={index} sx={{margin: 2}}>
-          <Card sx={{ maxWidth: 450, width: 375 }}>
+          <Card sx={{ maxWidth: 400, width: 350 }}>
             <CardMedia
-              sx={{ height: 450 }}
+              sx={{ height: 400 }}
               image={`${player.src ? player.src : 'player.png'}?w=248&fit=crop&auto=format`}
-              title="green iguana"
+              title={`${player.name} ${player.lastName}`}
             />
             <CardContent sx={{display: 'flex'}}>
-              <Typography variant="h5" color="#8F0406" sx={{marginRight: 3, fontSize: 40, lineHeight: 1.05}} >
+              <Typography variant="h5" color="#8F0406" sx={{marginRight: 1.5, fontSize: 34, lineHeight: 1.05}} >
                 {player.number}
               </Typography>
-              <Typography gutterBottom variant="h5" sx={{fontSize: 22}} >
+              <Typography gutterBottom variant="h5" sx={{fontSize: 18}} >
                 {`${player.name} ${player.lastName}`}
               </Typography>
             </CardContent>

@@ -10,6 +10,44 @@ import { TEAM } from "../data/playersData";
 import PlayersList from "./PlayersList";
 import FormationTitle from "./FormationTitle";
 import { useMediaQuery, useTheme } from '@mui/material';
+import Tabs, { tabsClasses } from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import { styled } from "@mui/material/styles";
+import { TabScrollButton } from '@mui/material';
+
+const StyledTabs = styled((props) => (
+  <Tabs
+    {...props}
+    TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
+  />
+))({
+  "& .MuiTabs-indicator": {
+    display: "flex",
+    justifyContent: "center",
+    backgroundColor: "transparent"
+  },
+  "& .MuiTabs-indicatorSpan": {
+    width: "100%",
+    backgroundColor: "#8F0406"
+  }
+});
+
+const StyledTab = styled((props) => <Tab {...props} />)(
+  ({ theme }) => ({
+    textTransform: "none",
+    fontWeight: theme.typography.fontWeightRegular,
+    fontSize: theme.typography.pxToRem(15),
+    marginRight: theme.spacing(1),
+    color: "white",
+    "&.Mui-selected": {
+      color: "#8F0406"
+    },
+    "&.Mui-focusVisible": {
+      backgroundColor: "rgba(100, 95, 228, 0.32)"
+    }
+  })
+);
 
 const TeamSquad = () => {
 
@@ -19,6 +57,20 @@ const TeamSquad = () => {
   const columns = isMediumScreen ? 
     1 
     : isLargeScreen ? 2 : 3;
+  const isBiggerScreenThanMedium = useMediaQuery(theme.breakpoints.up('sm'));
+
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const tabsStyle = {
+    display: 'flex',
+    overflowX: 'auto',
+    justifyContent: 'center',
+    alignItems: 'center'
+  };
 
   return (
     <Layout title={'Kadra'}>
@@ -27,7 +79,7 @@ const TeamSquad = () => {
           Kadra - sezon
           <ColoredText> 2023/2024</ColoredText>
         </ToDoTitle>
-        <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px', marginBottom: 20}}>
+        <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
           <img
             src="team.jpg"
             alt="Zdjęcie drużyny piłkarskiej"
@@ -35,36 +87,59 @@ const TeamSquad = () => {
           />
         </div>
 
-        <FormationTitle title="Sztab"/>
-        <ImageList sx={{maxWidth: 1250}} cols={columns}>
-          {TEAM.staff.map((item) => (
-            <ImageListItem key={item.img} sx={{marginLeft: 2, marginRight: 2}}>
-              <img
-                src={`${'durbas.jpg'}?w=248&fit=crop&auto=format`}
-                srcSet={`${'durbas.jpg'}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.description}
-                loading="lazy"
-              />
-              <ImageListItemBar
-                title={`${item.name} ${item.lastName}`}
-                subtitle={<span>{item.position}</span>}
-                position="below"
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+        <Box sx={{ bgcolor: "#161c2e", width: '95%', maxWidth: 1368 }}>
+          <StyledTabs
+            value={value}
+            variant={isBiggerScreenThanMedium ? "standard" : "scrollable"}
+            onChange={handleChange}
+            aria-label="kadra"
+            centered={isBiggerScreenThanMedium}
+            allowScrollButtonsMobile
+            ScrollButtonComponent={CustomTabScrollButton}
+          >
+            <StyledTab label="Sztab" />
+            <StyledTab label="Bramkarze" />
+            <StyledTab label="Obrońcy" />
+            <StyledTab label="Pomocnicy" />
+            <StyledTab label="Napastnicy" />
+          </StyledTabs>
+          <Box sx={{ p: 1 }} />
+        </Box>
 
-        <FormationTitle title="Bramkarze"/>
-        <PlayersList players={TEAM.goalkeepers} columns={columns} />
+        {value == 0 && 
+          <>
+            {/* <FormationTitle title="Sztab"/> */}
+            <PlayersList players={TEAM.staff} columns={columns} />
+          </>
+        }
 
-        <FormationTitle title="Obrońcy"/>
-        <PlayersList players={TEAM.defenders} columns={columns} />
+        {value == 1 && 
+          <>
+            {/* <FormationTitle title="Bramkarze"/> */}
+            <PlayersList players={TEAM.goalkeepers} columns={columns} />
+          </>
+        }
 
-        <FormationTitle title="Pomocnicy"/>
-        <PlayersList players={TEAM.midfielders} columns={columns} />
+        {value == 2 && 
+          <>
+            {/* <FormationTitle title="Obrońcy"/> */}
+            <PlayersList players={TEAM.defenders} columns={columns} />
+          </>
+        }
 
-        <FormationTitle title="Napastnicy"/>
-        <PlayersList players={TEAM.attackers} columns={columns} />
+        {value == 3 && 
+          <>
+            <FormationTitle title="Pomocnicy"/>
+            <PlayersList players={TEAM.midfielders} columns={columns} />
+          </>
+        }
+
+        {value == 4 && 
+          <>
+            <FormationTitle title="Napastnicy"/>
+            <PlayersList players={TEAM.attackers} columns={columns} />
+          </>
+        }
 
         {/* <Grid container spacing={2} sx={{maxWidth: 1368}}>
           {photos.map((photo, index) => (
@@ -78,5 +153,15 @@ const TeamSquad = () => {
     </Layout>
   );
 };
+
+function CustomTabScrollButton(props) {
+  return (
+    <TabScrollButton
+      {...props}
+      className="custom-scroll-button"
+      sx={{color: 'white'}}
+    />
+  );
+}
 
 export default TeamSquad;
