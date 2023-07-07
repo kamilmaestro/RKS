@@ -17,7 +17,7 @@ export const StyledMenu = styled.div`
         background-color: #292727;
     }
     
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
         display: flex;
     }
 `;

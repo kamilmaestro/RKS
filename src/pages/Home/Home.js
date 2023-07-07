@@ -5,7 +5,7 @@ import Layout from "../../components/Layout/Layout";
 
 const Home = () => {
     return (
-        <Layout title={'Home'}>
+        <Layout title={'Start'}>
             <VideoBackground/>
             <About/>
         </Layout>

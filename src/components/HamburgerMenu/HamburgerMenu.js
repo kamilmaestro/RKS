@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 
 const HamburgerMenu = ({manageDrawer}) => {
 
-    return (<StyledMenu title={'Open navigation drawer'} onClick={() => manageDrawer(true)}>
+    return (<StyledMenu title={'Otwórz menu'} onClick={() => manageDrawer(true)}>
         <MenuLine/>
         <MenuLine/>
         <MenuLine/>

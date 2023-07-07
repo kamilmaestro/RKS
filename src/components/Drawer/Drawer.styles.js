@@ -2,8 +2,9 @@ import styled  from 'styled-components';
 import {Link} from "react-router-dom";
 
 export const StyledDrawer = styled.div`
-    background-color: #111;
-    width: 65%;
+    background-color: #161c2e;
+    width: 60%;
+    max-width: 250px;
     height: 100%;
     z-index: 999;
     position: fixed;

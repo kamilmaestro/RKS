@@ -12,14 +12,17 @@ const About = () => {
         triggerOnce: true
     });
 
-    return (<AboutSection ref={ref}>
-        <AboutTitle>{' O naszym '}<ColoredText>{'klubie'}</ColoredText></AboutTitle>
-        <FaqContainer>
-            <FaqItem type={'add'} animate={inView}/>
-            <FaqItem type={'manage'} animate={inView}/>
-            <FaqItem type={'summary'} animate={inView}/>
-        </FaqContainer>
-    </AboutSection>);
+    return (
+        <AboutSection ref={ref}>
+            <AboutTitle>{' O naszym '}<ColoredText>{'klubie'}</ColoredText></AboutTitle>
+            <FaqContainer>
+                <FaqItem type={'add'} animate={inView}/>
+                <FaqItem type={'manage'} animate={inView}/>
+                <FaqItem type={'summary'} animate={inView}/>
+            </FaqContainer>
+            
+        </AboutSection>
+    );
 };
 
 export default About;

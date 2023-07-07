@@ -9,9 +9,10 @@ const Navbar = () => {
         <StyledNav>
             <NavLogo href={'/'} title={'Strona główna'}/>
             <StyledNavLinkContainer>
-                <StyledNavLink to={'/'} title={'home'}>{'Start'}</StyledNavLink>
-                <StyledNavLink to={'/todo-list'} title={'start'}>{'Rozgrywki'}</StyledNavLink>
-                <StyledNavLink to={'/contact'} title={'contact'}>{'Kadra'}</StyledNavLink>
+                <StyledNavLink to={'/'} title={'Start'}>{'Start'}</StyledNavLink>
+                <StyledNavLink to={'/competitions'} title={'Rozgrywki'}>{'Rozgrywki'}</StyledNavLink>
+                <StyledNavLink to={'/squad'} title={'Kadra'}>{'Kadra'}</StyledNavLink>
+                <StyledNavLink to={'/contact'} title={'Kontakt'}>{'Kontakt'}</StyledNavLink>
             </StyledNavLinkContainer>
             <HamburgerMenu/>
         </StyledNav>

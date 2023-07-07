@@ -34,7 +34,7 @@ const Drawer = ({drawerIsOpen, manageDrawer}) => {
                 />
                 <LinkText>{'Start'}</LinkText>
             </StyledLink>
-            <StyledLink to={'/todo-list'} onClick={() => manageDrawer(false)}>
+            <StyledLink to={'/competitions'} onClick={() => manageDrawer(false)}>
                 <FontAwesomeIcon
                     icon={faClipboardList}
                     color={'grey'}
@@ -42,7 +42,7 @@ const Drawer = ({drawerIsOpen, manageDrawer}) => {
                 />
                 <LinkText>{'Rozgrywki'}</LinkText>
             </StyledLink>
-            <StyledLink to={'/contact'} onClick={() => manageDrawer(false)}>
+            <StyledLink to={'/squad'} onClick={() => manageDrawer(false)}>
                 <FontAwesomeIcon
                     icon={faUser}
                     color={'grey'}
@@ -50,19 +50,14 @@ const Drawer = ({drawerIsOpen, manageDrawer}) => {
                 />
                 <LinkText>{'Kadra'}</LinkText>
             </StyledLink>
-            <SpecialStyledLink href={'https://google.com'} target={'_blank'}>
-                <SpecialLinkContainer>
-                    <SpecialLinkText>{'google.com'}</SpecialLinkText>
-                    <SpecialLinkSubtext>{'Visit my official website for more projects.'}</SpecialLinkSubtext>
-                </SpecialLinkContainer>
-                <ExternalLinkContainer>
-                    <FontAwesomeIcon
-                        icon={faExternalLinkAlt}
-                        color={'grey'}
-                        style={{width: 15, height: 15}}
-                    />
-                </ExternalLinkContainer>
-            </SpecialStyledLink>
+            <StyledLink to={'/contact'} onClick={() => manageDrawer(false)}>
+                <FontAwesomeIcon
+                    icon={faEnvelope}
+                    color={'grey'}
+                    style={{width: 25, height: 25, marginLeft: 10}}
+                />
+                <LinkText>{'Kontakt'}</LinkText>
+            </StyledLink>
         </DrawerContent>
     </StyledDrawer>
     );

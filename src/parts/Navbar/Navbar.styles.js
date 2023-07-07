@@ -43,8 +43,8 @@ export const StyledNavLink = styled(Link)`
     letter-spacing: 4px;
     color: white;
     cursor: pointer;
-    margin-left: 50px; 
-    margin-right: 50px;
+    margin-left: 30px; 
+    margin-right: 30px;
     padding-bottom: 2px;
     background-image: linear-gradient(#8F0406, #8F0406);
     background-position: 0 100%; 

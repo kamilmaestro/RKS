@@ -6,18 +6,19 @@ import ColoredText from "../../components/ColoredText/ColoredText";
 import SectionText from "../../components/Section/SectionText";
 import SectionTag from "../../components/SectionTag/SectionTag";
 import {RedirectButton} from "./NotFound.styles";
+import {Link} from "react-router-dom";
 
 const NotFound = () => {
     return (
         <Layout title={'404'}>
             <SectionContainer>
-                <SectionTitle>
-                    <ColoredText>{'// '}</ColoredText>
-                    {'Page'}
-                    <ColoredText>{' not found'}</ColoredText>
-                </SectionTitle>
-                <SectionText>{'Nie ma takiej strony'}</SectionText>
-                <RedirectButton to={'/'}>{'Back to the main page'}</RedirectButton>
+                <Link to={'/'}> 
+                    <SectionTitle>
+                        {'Nie ma takiej'}
+                        <ColoredText>{' strony'}</ColoredText>
+                    </SectionTitle> 
+                    <SectionText> {'Jak awansujemy to kto wie...'} </SectionText> 
+                </Link>
             </SectionContainer>
         </Layout>
     );

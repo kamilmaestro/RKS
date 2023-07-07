@@ -65,13 +65,6 @@ const TeamSquad = () => {
     setValue(newValue);
   };
 
-  const tabsStyle = {
-    display: 'flex',
-    overflowX: 'auto',
-    justifyContent: 'center',
-    alignItems: 'center'
-  };
-
   return (
     <Layout title={'Kadra'}>
       <ToDoContainer>
@@ -141,14 +134,6 @@ const TeamSquad = () => {
           </>
         }
 
-        {/* <Grid container spacing={2} sx={{maxWidth: 1368}}>
-          {photos.map((photo, index) => (
-            <Grid key={index} item xs={12} sm={6} md={4} lg={3} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-              <img src={photo.src} alt={`Zdjęcie ${index + 1}`} style={{ width: '100%' }} />
-              <Typography variant="caption">{photo.description}</Typography>
-            </Grid>
-          ))}
-        </Grid> */}
       </ToDoContainer>
     </Layout>
   );
