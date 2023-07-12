@@ -5,14 +5,14 @@ import ColoredText from "../components/ColoredText/ColoredText";
 import { useLocation } from 'react-router-dom';
 import { Typography, Card, CardMedia, CardContent } from '@mui/material';
 
-const Article = ({ }) => {
+const Article = ({}) => {
 
   const location = useLocation();
   const { article } = location.state;
 
   const getTitle = (title) => {
     const words = title.split(' ');
-    const last = words[words.length - 1]
+    const last = words[words.length - 1];
     const wordsWithoutLast = words.slice(0, -1);
 
     return (
@@ -34,9 +34,11 @@ const Article = ({ }) => {
             style={{maxWidth: '700px', maxHeight: '600px', height: 'auto', width: '100%'}}
           />
         </div>
-        <div style={{width: '95%', marginBottom: 50, maxWidth: '1200px'}}>
+        <div style={{width: '95%', marginBottom: 150, maxWidth: '1200px'}}>
           {article && getTitle(article.title)}
-          {article && article.content}
+          <Typography component="div" style={{ whiteSpace: 'pre-line' }} >
+            {article && article.content}
+          </Typography>
         </div>
       </ToDoContainer>
     </Layout>

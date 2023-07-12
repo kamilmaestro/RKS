@@ -23,7 +23,7 @@ const ArticlePreview = ({ article }) => {
       hour: 'numeric',
       minute: '2-digit',
     });
-    
+
     return formattedDate
   }
 
