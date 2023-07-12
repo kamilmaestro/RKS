@@ -1,0 +1,29 @@
+.blogsContainer {
+  padding-top: 40px;
+}
+
+.card {
+  max-width: 100%;
+}
+
+.media {
+  height: 240px;
+}
+
+.content {
+  min-height: 125px;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.author {
+  display: flex;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+}

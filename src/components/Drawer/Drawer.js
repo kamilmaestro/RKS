@@ -26,13 +26,13 @@ const Drawer = ({drawerIsOpen, manageDrawer}) => {
             <CloseButton onClick={() => manageDrawer(false)} title={'Zamknij'}/>
         </DrawerTop>
         <DrawerContent>
-            <StyledLink to={'/'} onClick={() => manageDrawer(false)} style={{marginTop: 15}}>
+            <StyledLink to={'/blog'} onClick={() => manageDrawer(false)} style={{marginTop: 15}}>
                 <FontAwesomeIcon
                     icon={faHome}
                     color={'grey'}
                     style={{width: 25, height: 25, marginLeft: 10}}
                 />
-                <LinkText>{'Start'}</LinkText>
+                <LinkText>{'Blog'}</LinkText>
             </StyledLink>
             <StyledLink to={'/competitions'} onClick={() => manageDrawer(false)}>
                 <FontAwesomeIcon

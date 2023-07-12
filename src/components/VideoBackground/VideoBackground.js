@@ -19,7 +19,7 @@ const VideoBackground = () => {
             <IntroContainer>
                 <IntroLogo/>
                 <PageQuote>{' Amatorska drużyna piłkarska założona w 2001 roku'}</PageQuote>
-                <StartButton to={'//www.facebook.com/profile.php?id=100057141112887'}>{'Najnowsze wiadomości'}</StartButton>
+                <StartButton to={'/blog'}>{'Najnowsze wiadomości'}</StartButton>
             </IntroContainer>
         </VideoContainer>
     );

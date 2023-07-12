@@ -9,7 +9,7 @@ const Navbar = () => {
         <StyledNav>
             <NavLogo href={'/'} title={'Strona główna'}/>
             <StyledNavLinkContainer>
-                <StyledNavLink to={'/'} title={'Start'}>{'Start'}</StyledNavLink>
+                <StyledNavLink to={'/blog'} title={'Blog'}>{'Blog'}</StyledNavLink>
                 <StyledNavLink to={'/competitions'} title={'Rozgrywki'}>{'Rozgrywki'}</StyledNavLink>
                 <StyledNavLink to={'/squad'} title={'Kadra'}>{'Kadra'}</StyledNavLink>
                 <StyledNavLink to={'/contact'} title={'Kontakt'}>{'Kontakt'}</StyledNavLink>
