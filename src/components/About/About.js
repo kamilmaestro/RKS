@@ -4,6 +4,7 @@ import ColoredText from "../ColoredText/ColoredText";
 import FaqItem from "../FaqItem/FaqItem";
 import {useInView} from "react-intersection-observer";
 import SectionTag from "../SectionTag/SectionTag";
+import TeamHistory from "../../TeamHistory/TeamHistory";
 
 const About = () => {
 
@@ -14,11 +15,12 @@ const About = () => {
 
     return (
         <AboutSection ref={ref}>
-            <AboutTitle>{' O naszym '}<ColoredText>{'klubie'}</ColoredText></AboutTitle>
+            <AboutTitle>{'O naszym '}<ColoredText>{'klubie'}</ColoredText></AboutTitle>
             <FaqContainer>
-                <FaqItem type={'add'} animate={inView}/>
+                <TeamHistory />
+                {/* <FaqItem type={'add'} animate={inView}/>
                 <FaqItem type={'manage'} animate={inView}/>
-                <FaqItem type={'summary'} animate={inView}/>
+                <FaqItem type={'summary'} animate={inView}/> */}
             </FaqContainer>
             
         </AboutSection>

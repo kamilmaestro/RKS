@@ -55,7 +55,7 @@ export const FaqContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;    
-    margin-top: 60px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
     flex-wrap: wrap;
 `;

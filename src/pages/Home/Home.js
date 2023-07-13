@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <Layout title={'Start'}>
             <VideoBackground/>
-            {/* <About/> */}
+            <About/>
         </Layout>
     );
 };

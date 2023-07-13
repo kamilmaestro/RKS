@@ -50,11 +50,11 @@ export const IntroLogo = styled(Logo)`
     margin: 0;
     
     ${({ theme }) => theme.mediaBreakpoints.lg} {
-        transform: scale(1.5);
+        transform: scale(1.8);
     }
     
     ${({ theme }) => theme.mediaBreakpoints.md} {
-        transform: scale(1);
+        transform: scale(1.5);
     }
     
 `;
@@ -72,12 +72,12 @@ export const PageQuote = styled.p`
     white-space: pre-wrap;
     
     ${({ theme }) => theme.mediaBreakpoints.lg} {
-        font-size: ${({theme}) => theme.fontPrimary.size.sm};
-        margin: 50px;
+        font-size: ${({theme}) => theme.fontPrimary.size.md};
+        margin: 40px;
     }
     
     ${({ theme }) => theme.mediaBreakpoints.md} {
-        margin: 30px;
+        margin: 25px;
     }
       
     ${({ theme }) => theme.mediaBreakpoints.mobile} {
@@ -109,11 +109,7 @@ export const StartButton = styled(Link)`
         background-color: #8F040650;
     }
     
-    ${({ theme }) => theme.mediaBreakpoints.lg} {
-        transform: scale(0.9);   
-    }
-    
     ${({ theme }) => theme.mediaBreakpoints.md} {
-        transform: scale(0.8);  
+        transform: scale(0.9);  
     }
 `;
