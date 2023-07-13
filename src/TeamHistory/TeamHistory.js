@@ -18,7 +18,7 @@ const TeamHistory = () => {
           style={{maxWidth: '95%', height: 'auto'}}
         />
       </div>
-      <div style={{width: '100%', marginLeft: 30, marginTop: isSmallScreen ? 25 : 0, marginBottom: 50, maxWidth: isMediumScreen ? '450px' : '625px', display: 'flex', alignItems: 'center'}}>
+      <div style={{width: '100%', marginLeft: isSmallScreen ? 0 : 30, marginTop: isSmallScreen ? 25 : 0, marginBottom: 50, maxWidth: isMediumScreen ? (isSmallScreen ? '95%' : '450px') : '625px', display: 'flex', alignItems: 'center'}}>
         <Typography component="div" align="left" style={{ whiteSpace: 'pre-line' }}>
           {text}
         </Typography>
