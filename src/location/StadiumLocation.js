@@ -4,11 +4,13 @@ import { useMediaQuery, useTheme } from '@mui/material';
 import { FacebookProvider, Page } from 'react-facebook';
 import { ToDoContainer, ToDoTitle } from "../pages/ToDo/ToDo.styles";
 import ColoredText from "../components/ColoredText/ColoredText";
+import { getFbPageIFrameURL } from "./fbProvider";
 
 const StadiumLocation = () => {
 
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Layout title={'Rozgrywki'}>
@@ -37,8 +39,9 @@ const StadiumLocation = () => {
         <div style={{width: '100%', display: 'flex', justifyContent: 'center', marginBottom: 50}}> 
           <iframe 
             title="RKS"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100057141112887&tabs=timeline&width=500&height=800&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-            width="500" height="600" 
+            src={getFbPageIFrameURL(isMediumScreen)}
+            width={isMediumScreen ? "500" : "350"} 
+            height={isMediumScreen ? "600" : "500"} 
             style={{ border: 'none', overflow: 'hidden', maxWidth: '95%' }} 
             frameborder="0" 
             allowfullscreen="true" 

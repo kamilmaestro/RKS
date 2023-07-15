@@ -15,7 +15,7 @@ const About = () => {
 
     return (
         <AboutSection ref={ref}>
-            <AboutTitle>{'O naszym '}<ColoredText>{'klubie'}</ColoredText></AboutTitle>
+            <AboutTitle>{'Historia naszego '}<ColoredText>{'klubu'}</ColoredText></AboutTitle>
             <FaqContainer>
                 <TeamHistory />
                 {/* <FaqItem type={'add'} animate={inView}/>
