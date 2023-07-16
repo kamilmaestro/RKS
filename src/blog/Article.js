@@ -2,13 +2,36 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import { ToDoContainer, ToDoTitle } from "../pages/ToDo/ToDo.styles";
 import { useLocation } from 'react-router-dom';
-import { Box } from '@mui/material';
 import ContentRenderer from "./ContentRenderer";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from "../database/firebase";
 
 const Article = () => {
 
-  const location = useLocation();
-  const { article } = location.state;
+  const { id } = useParams();
+
+  const [article, setArticle] = useState(null);
+
+  useEffect(() => {
+    const fetchArticle = async () => {
+      try {
+        const docRef = doc(db, 'articles', id);
+        const docSnapshot = await getDoc(docRef);
+
+        if (docSnapshot.exists()) {
+          setArticle({ id: docSnapshot.id, ...docSnapshot.data() });
+        } else {
+          console.log('No such document!');
+        }
+      } catch (error) {
+        console.error('Error fetching article:', error);
+      }
+    };
+
+    fetchArticle();
+  }, [id]);
 
   const getTitle = (title) => {
     const words = title.split(' ');

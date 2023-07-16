@@ -32,13 +32,13 @@ const ArticlePreview = ({ article }) => {
       <Card className={'card'}>
         <CardActionArea>
           <Link to={{
-            pathname: `/article`,
+            pathname: `/article/${article.id}`,
             state: { article: article },
           }} style={{ textDecoration: 'none', color: 'inherit'}}>
             <CardMedia
               className={'media'}
-              image={article ? article.imageUrl : "https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"}
-              title="Contemplative Reptile"
+              image={article ? article.imageUrl : ""}
+              title="Artykuł"
             />
             <CardContent className='content'>
               <Typography gutterBottom variant="h5" component="h2">
@@ -53,7 +53,7 @@ const ArticlePreview = ({ article }) => {
                     trimRight
                     basedOn='letters'
                   />
-                : '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doucia deseruid est laborum."'}
+                : ''}
               </Typography>
             </CardContent>
           </Link>

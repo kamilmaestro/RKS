@@ -15,7 +15,10 @@ const Blog = () => {
       const articlesRef = collection(db, 'articles');
       await getDocs(articlesRef).then((data) => {
           let articlesData = data.docs
-            .map((doc) => doc.data());
+            .map((doc) => ({
+              id: doc.id,
+              ...doc.data(),
+            }));
           setArticles(articlesData)
         }).catch((err) => {
           console.log(err);

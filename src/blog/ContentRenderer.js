@@ -15,6 +15,7 @@ const ContentRenderer = ({ article }) => {
   }
 
   const splitContent = (content) => {
+    content = article.content.replaceAll('\\n', '\n')
     return content.split(/(<video>.*?<\/video>|<image>.*?<\/image>)/);
   }
 
@@ -23,7 +24,6 @@ const ContentRenderer = ({ article }) => {
       {splitContent(article.content).map((section, index) => {
         if (section.startsWith("<video>")) {
           const videoUrl = section.replace(/<\/?video>/g, "");
-          console.log('sd: ', videoUrl)
           return (
             putVideo(videoUrl)
           );
