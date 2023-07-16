@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import { ToDoContainer, ToDoTitle } from "../pages/ToDo/ToDo.styles";
-import ColoredText from "../components/ColoredText/ColoredText";
 import { useLocation } from 'react-router-dom';
-import { Typography, Card, CardMedia, CardContent } from '@mui/material';
+import { Box } from '@mui/material';
+import ContentRenderer from "./ContentRenderer";
 
-const Article = ({}) => {
+const Article = () => {
 
   const location = useLocation();
   const { article } = location.state;
@@ -13,13 +13,14 @@ const Article = ({}) => {
   const getTitle = (title) => {
     const words = title.split(' ');
     const last = words[words.length - 1];
-    const wordsWithoutLast = words.slice(0, -1);
+    const wordsWithoutLast = words.slice(0, -1).join(' ');
 
     return (
       <ToDoTitle style={{display: 'flex', justifyContent: 'center', fontFamily: 'Roboto'}}>
-        {wordsWithoutLast}
-        <span style={{marginLeft: 4}}/>
-        <ColoredText> {last}</ColoredText>
+        <p style={{textAlign: 'center'}}>
+          <span>{wordsWithoutLast}</span>{" "}
+          <span style={{ color: "#8F0406" }}>{last}</span>
+        </p>
       </ToDoTitle>
     )
   }
@@ -36,9 +37,7 @@ const Article = ({}) => {
         </div>
         <div style={{width: '95%', marginBottom: 150, maxWidth: '1200px'}}>
           {article && getTitle(article.title)}
-          <Typography component="div" style={{ whiteSpace: 'pre-line' }} >
-            {article && article.content}
-          </Typography>
+          { article && <ContentRenderer article={article} /> }
         </div>
       </ToDoContainer>
     </Layout>
