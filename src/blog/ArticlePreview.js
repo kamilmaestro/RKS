@@ -31,8 +31,6 @@ const ArticlePreview = ({ article }) => {
   const getPreview = (content) => {
     const videoRegex = /<video>(.*?)<\/video>/g;
     const imageRegex = /<image>(.*?)<\/image>/g;
-  
-    // Replace the <video> and <image> tags with an empty string to remove them
     const cleanedContent = content.replace(videoRegex, '').replace(imageRegex, '');
   
     return cleanedContent

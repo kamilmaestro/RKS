@@ -1,0 +1,25 @@
+.app-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #161c2e;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.title {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.video-wrapper {
+  width: 100%; 
+}
+
+/* If you want each video to take 100% width and be centered separately, use the following CSS instead */
+/* .video-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */

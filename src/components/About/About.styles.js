@@ -17,12 +17,13 @@ export const AboutSection = styled.div`
    width: 100%;
    text-align: center; 
    position: relative;
+   padding-bottom: 25px;
 `;
 
 export const AboutTitle = styled.p`
     color: black;
     margin: 0;
-    padding: 50px 0 50px 0;
+    padding: 55px 0 30px 0;
     font-family: ${({theme}) => theme.fontSecondary.family};
     font-size: ${({theme}) => theme.fontSecondary.size.title};
     
@@ -55,7 +56,6 @@ export const FaqContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;    
-    margin-top: 10px;
     margin-bottom: 0px;
     flex-wrap: wrap;
 `;

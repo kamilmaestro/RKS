@@ -1,18 +1,21 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { getRKSSchedule } from '../data/scheduleData';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { Icon } from '@mui/material';
-import { blue, red } from '@mui/material/colors';
 import ColoredText from "../components/ColoredText/ColoredText";
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const SingularMatches = ({ schedule = [] }) => {
+
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+  const convertScore = (score) => {
+    return score.split('-').join(' : ')
+  }
 
   return (
     <div className='singular-container' style={{width: "100%", maxWidth: 1000}}>
@@ -33,12 +36,21 @@ const SingularMatches = ({ schedule = [] }) => {
                   <Typography sx={{ fontSize: 16, marginBottom: 2 }} color="text.secondary" gutterBottom>
                     {fixture.name}
                   </Typography>
-                  <Typography variant="h5" component="div">
-                    {fixture.match.home}  <ColoredText>{ fixture.match.score }</ColoredText> {fixture.match.away}
-                  </Typography>
-                  <Typography sx={{ fontSize: 16, marginTop: 2 }} color="text.secondary" gutterBottom>
-                    <Icon><CalendarMonthIcon/></Icon> {fixture.match.date}
-                  </Typography>
+                  <div>
+                    <Typography variant="h5" component="div" sx={{display: 'flex', flexDirection: isSmallScreen ? 'column' : 'row', alignItems: 'center'}}>
+                      {fixture.match.home} 
+                      <ColoredText style={{marginLeft: 15, marginRight: 15}} >
+                        { convertScore(fixture.match.score) }
+                      </ColoredText> 
+                      {fixture.match.away}
+                    </Typography>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                    <Icon sx={{color: '#00000099'}}><CalendarMonthIcon/></Icon>
+                    <Typography sx={{ fontSize: 16, marginTop: 2, marginLeft: 0.5 }} color="text.secondary" gutterBottom>
+                     {fixture.match.date}
+                    </Typography>
+                  </div>
                 </CardContent>
               </Card>
             </div>

@@ -6,7 +6,7 @@ export const VideoContainer = styled.div`
     width: 100%;
     max-height: 100%;
     position: relative;
-    background-color: black;
+    background-color: #161c2e;
     min-height: 400px;
     margin: 0;
 `;
