@@ -7,9 +7,9 @@ import { useMediaQuery, useTheme } from '@mui/material';
 const NextMatch = () => {
 
   const nextMatch = {
-    date: "6 sierpnia, 11:00",
-    home: "RKS Radgoszcz",
-    away: "Łukovia Łukowa",
+    date: "20 sierpnia, 16:30",
+    home: "MLKS Żabno II",
+    away: "RKS Radgoszcz",
     score: " vs "
    }
 
