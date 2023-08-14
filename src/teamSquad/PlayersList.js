@@ -31,28 +31,14 @@ const PlayersList = ({players = [], columns = 3}) => {
                 {`${player.name} ${player.lastName}`}
               </Typography>
             </CardContent>
-            <CardActions>
+            {/* <CardActions>
               <Button size="small" sx={{color:'#161c2e'}}>Zostań fanem</Button>
-            </CardActions>
+            </CardActions> */}
           </Card>
         </ImageListItem>
       ))}
     </ImageList>
   );
 };
-
-{/* <ImageListItem key={index} sx={{marginLeft: 2, marginRight: 2}}>
-<img
-  src={`${player.src ? player.src : 'player.png'}?w=248&fit=crop&auto=format`}
-  srcSet={`${player.src ? player.src : 'player.png'}?w=248&fit=crop&auto=format&dpr=2 2x`}
-  alt={`${player.name} ${player.lastName}`}
-  loading="lazy"
-/>
-<ImageListItemBar
-  title={`${player.name} ${player.lastName}`}
-  subtitle={<span>{player.number}</span>}
-  position="below"
-/>
-</ImageListItem> */}
 
 export default PlayersList;

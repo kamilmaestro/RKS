@@ -122,14 +122,14 @@ const TeamSquad = () => {
 
         {value == 3 && 
           <>
-            <FormationTitle title="Pomocnicy"/>
+            {/* <FormationTitle title="Pomocnicy"/> */}
             <PlayersList players={TEAM.midfielders} columns={columns} />
           </>
         }
 
         {value == 4 && 
           <>
-            <FormationTitle title="Napastnicy"/>
+            {/* <FormationTitle title="Napastnicy"/> */}
             <PlayersList players={TEAM.attackers} columns={columns} />
           </>
         }

@@ -1,5 +1,5 @@
-export const getRKSSchedule = () => {
-  const schedule = getSchedule();
+export const getOnlyRksSchedule = () => {
+  const schedule = getAllTeamsSchedule();
 
   return schedule.map((fixture) => ({
     name: fixture.name.split(" - ")[0],
@@ -7,22 +7,87 @@ export const getRKSSchedule = () => {
   }))
 }
 
-const getSchedule = () => {
-  return BASIC_SCHEDULE.fixture.map((fix) => ({
-    ...fix,
-    match: fix.match.map((match) => {
-      if (match.home === "Spartakus Radgoszcz") {
-        return { ...match, home: "RKS Radgoszcz" }
-      } else if (match.away === "Spartakus Radgoszcz") {
-        return { ...match, away: "RKS Radgoszcz" }
-      } else {
-        return match
-      }
-    })
-  }));
+export const getNearestMatch = () => {
+  const currentDate = new Date();
+  let nearestMatch = null;
+  let nearestDifference = Infinity;
+  const matches = getOnlyRksSchedule()
+  console.log(matches)
+
+  for (const match of matches) {
+    const matchDate = parsePolishDate(match.match);
+    const timeDifference = Math.abs(matchDate - currentDate);
+
+    if (timeDifference < nearestDifference) {
+      nearestMatch = match;
+      nearestDifference = timeDifference;
+    }
+  }
+
+  return nearestMatch.match;
+}
+
+const months = {
+  stycznia: 0, // January
+  lutego: 1, // February
+  marca: 2, // March
+  kwietnia: 3, // April
+  maja: 4, // May
+  czerwca: 5, // June
+  lipca: 6, // July
+  sierpnia: 7, // August
+  września: 8, // September
+  października: 9, // October
+  listopada: 10, // November
+  grudnia: 11, // December
+};
+
+const parsePolishDate = (match) => {
+  const dateString = match.date
+  const [dayWithMonthString, time] = dateString.split(', ');
+  const [day, month] = dayWithMonthString.split(' ');
+
+  const matchDate = new Date();
+  matchDate.setHours(parseInt(time.split(':')[0], 10));
+  matchDate.setMinutes(parseInt(time.split(':')[1], 10));
+  matchDate.setDate(parseInt(day, 10));
+  matchDate.setMonth(months[month]);
+  matchDate.setFullYear(match.year);
+
+  return matchDate;
+}
+
+const getAllTeamsSchedule = () => {
+  return BASIC_SCHEDULE.fixture
+    .map((fix) => ({
+      ...fix,
+      match: fix.match.map((match) => {
+        if (match.home === "Spartakus Radgoszcz") {
+          return { ...match, home: "RKS Radgoszcz" }
+        } else if (match.away === "Spartakus Radgoszcz") {
+          return { ...match, away: "RKS Radgoszcz" }
+        } else {
+          return match
+        }
+      })
+    }))
+    .map((fix) => ({
+      ...fix,
+      match: fix.match.map((match) => {
+        const [dayWithMonthString, time] = match.date.split(', ');
+        const [day, month] = dayWithMonthString.split(' ');
+        if (months[month] >= 7 && months[month] <= 11) {
+          return { ...match, year: BASIC_SCHEDULE.start }
+        } else {
+          return { ...match, year: BASIC_SCHEDULE.end }
+        }
+      })
+    }));
 }
 
 const BASIC_SCHEDULE = {
+  "start": 2022,
+  "end": 2023,
   "fixture": [
    {
     "name": "Kolejka 1 - 13-14 sierpnia",
