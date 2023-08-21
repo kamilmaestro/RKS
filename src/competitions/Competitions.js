@@ -5,6 +5,7 @@ import ColoredText from "../components/ColoredText/ColoredText";
 import LeagueTable from "./Table";
 import SingularMatches from "./SingularMatches";
 import { getOnlyRksSchedule } from "../data/scheduleData";
+import { getRKSSchedule } from "../data/leagueScheduleData"
 
 const Competitions = () => {
 
@@ -13,14 +14,14 @@ const Competitions = () => {
       <ToDoContainer>
         <ToDoTitle>
           Klasa B
-          <ColoredText> 2022/2023</ColoredText>
+          <ColoredText> 2023/2024</ColoredText>
         </ToDoTitle>
         <LeagueTable />
         <ToDoTitle>
           Rozgrywane
           <ColoredText> mecze</ColoredText>
         </ToDoTitle>
-        <SingularMatches schedule={getOnlyRksSchedule()} />
+        <SingularMatches schedule={getRKSSchedule()} />
       </ToDoContainer>
     </Layout>
   );

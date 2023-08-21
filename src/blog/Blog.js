@@ -19,7 +19,8 @@ const Blog = () => {
               id: doc.id,
               ...doc.data(),
             }));
-          setArticles(articlesData)
+          const sortedArticles = articlesData.sort((a, b) => b.createdAt - a.createdAt);
+          setArticles(sortedArticles)
         }).catch((err) => {
           console.log(err);
         })

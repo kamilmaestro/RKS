@@ -17,13 +17,29 @@ const SingularMatches = ({ schedule = [] }) => {
     return score.split('-').join(' : ')
   }
 
+  const getIndex = () => {
+    if (!schedule) {
+      return 1
+    }
+    let lastMatchWithScore = null;
+    for (let i = schedule.length - 1; i >= 0; i--) {
+      if (schedule[i].score !== '-') {
+        lastMatchWithScore = schedule[i];
+        break;
+      }
+    }
+    console.log(lastMatchWithScore)
+
+    return lastMatchWithScore.round - 1
+  }
+
   return (
     <div className='singular-container' style={{width: "100%", maxWidth: 1000}}>
       <Carousel 
         sx={{marginBottom: 25}} 
         navButtonsAlwaysVisible 
         cycleNavigation = {false} 
-        index={schedule && schedule.length} 
+        index={getIndex()} 
         autoPlay = {false}
         fullHeightHover = {false}
         navButtonsProps={{ style: { color: 'white', backgroundColor: '#161c2e' } }} //#161c2e  #8F0406
@@ -34,23 +50,28 @@ const SingularMatches = ({ schedule = [] }) => {
               <Card sx={{ minWidth: 275 }}>
                 <CardContent sx={{marginLeft: 5, marginRight: 5, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                   <Typography sx={{ fontSize: 16, marginBottom: 2 }} color="text.secondary" gutterBottom>
-                    {fixture.name}
+                    {`Kolejka ${fixture.round}`}
                   </Typography>
                   <div>
-                    <Typography variant="h5" component="div" sx={{display: 'flex', flexDirection: isSmallScreen ? 'column' : 'row', alignItems: 'center'}}>
-                      {fixture.match.home} 
-                      <ColoredText style={{marginLeft: 15, marginRight: 15}} >
-                        { convertScore(fixture.match.score) }
-                      </ColoredText> 
-                      {fixture.match.away}
-                    </Typography>
+                    { (fixture.away !== '---' && fixture.home !== '---') ?
+                      <Typography variant="h5" component="div" sx={{display: 'flex', flexDirection: isSmallScreen ? 'column' : 'row', alignItems: 'center'}}>
+                        {fixture.home} 
+                        <ColoredText style={{marginLeft: 15, marginRight: 15}} >
+                          { convertScore(fixture.score) }
+                        </ColoredText> 
+                        {fixture.away}
+                      </Typography>
+                      : <Typography variant="h5" component="div" sx={{display: 'flex', flexDirection: isSmallScreen ? 'column' : 'row', alignItems: 'center'}}>RKS pauzuje</Typography>
+                    }
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
-                    <Icon sx={{color: '#00000099'}}><CalendarMonthIcon/></Icon>
-                    <Typography sx={{ fontSize: 16, marginTop: 2, marginLeft: 0.5 }} color="text.secondary" gutterBottom>
-                     {fixture.match.date}
-                    </Typography>
-                  </div>
+                  { fixture.date && 
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                      <Icon sx={{color: '#00000099'}}><CalendarMonthIcon/></Icon>
+                      <Typography sx={{ fontSize: 16, marginTop: 2, marginLeft: 0.5 }} color="text.secondary" gutterBottom>
+                      {fixture.date}
+                      </Typography>
+                    </div> 
+                  }
                 </CardContent>
               </Card>
             </div>

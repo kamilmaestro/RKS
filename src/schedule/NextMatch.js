@@ -10,12 +10,12 @@ const NextMatch = () => {
 
   const [nextMatch, setNextMatch] = useState(null);
 
-  // const nextMatch = {
-  //   date: "20 sierpnia, 16:30",
-  //   home: "MLKS Żabno II",
-  //   away: "RKS Radgoszcz",
-  //   score: " vs "
-  //  }
+  const nextMatchStatic = {
+    date: "26 sierpnia, 17:00",
+    home: "RKS Radgoszcz",
+    away: "Dąbrovia II",
+    score: " vs "
+   }
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
@@ -44,7 +44,7 @@ const NextMatch = () => {
             component="div" 
             color="white"
           >
-            {nextMatch.home}  <ColoredText style={{marginLeft: 15, marginRight: 15}} >{ nextMatch.score }</ColoredText> {nextMatch.away}
+            {nextMatchStatic.home}  <ColoredText style={{marginLeft: 15, marginRight: 15}} >{ nextMatchStatic.score }</ColoredText> {nextMatchStatic.away}
           </Typography>
         </div>
         <div style={{ 
@@ -54,7 +54,7 @@ const NextMatch = () => {
             <CalendarMonthIcon fontSize="small"/>
           </Icon>
           <Typography sx={{ fontSize: isSmallScreen ? 14 : 16, marginTop: 2, marginLeft: isSmallScreen ? 0 : 1, fontWeight: 300, fontStyle: 'italic'  }} color="white" gutterBottom>
-            {nextMatch.date}
+            {nextMatchStatic.date}
           </Typography>
         </div>
       </div>

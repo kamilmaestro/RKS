@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import { ToDoContainer, ToDoTitle } from "../pages/ToDo/ToDo.styles";
 import ColoredText from "../components/ColoredText/ColoredText";
-import { TABLE } from "../data/competitionsData";
+import { TABLE } from "../data/leagueTableData";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -24,7 +24,7 @@ const LeagueTable = () => {
         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
       >
         <TableCell component="th" scope="row">
-          {team.pos}
+          {team.pos ? team.pos : `${index + 1}.`}
         </TableCell>
         <TableCell align="left">{team.name}</TableCell>
         <TableCell align="left">{<b>{team.pts}</b>}</TableCell>
