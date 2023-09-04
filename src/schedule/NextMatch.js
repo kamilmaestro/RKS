@@ -11,9 +11,9 @@ const NextMatch = () => {
   const [nextMatch, setNextMatch] = useState(null);
 
   const nextMatchStatic = {
-    date: "26 sierpnia, 17:00",
+    date: "10 września, 11:00",
     home: "RKS Radgoszcz",
-    away: "Dąbrovia II",
+    away: "LKS Smęgorzów",
     score: " vs "
    }
 

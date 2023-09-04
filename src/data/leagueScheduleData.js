@@ -9,7 +9,6 @@ export const getRKSSchedule = () => {
         }
     });
 }
-       
 
 const LEAGUE_SCHEDULE = {
   "start": 2023,
@@ -130,49 +129,49 @@ const LEAGUE_SCHEDULE = {
     "date": ""
    },
    {
-    "score": "-",
+    "score": "3-1",
     "away": "Dunajec Ujście Jezuickie",
     "home": "MLKS II Żabno",
     "date": "3 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "2-3",
     "away": "Brzoza Brzezówka",
     "home": "Dąbrovia II Dąbrowa Tarnowska",
     "date": "3 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "2-2",
     "away": "Spartakus Radgoszcz",
     "home": "Kłos Słupiec",
     "date": "3 września, 14:00"
    },
    {
-    "score": "-",
+    "score": "1-1",
     "away": "LZS Mędrzechów",
     "home": "LZS Olesno",
     "date": "3 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "2-2",
     "away": "Wisła Borusowa",
     "home": "Olimpia Biskupice Radłowskie",
     "date": "2 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "3-1",
     "away": "DTS Dąbrowa Tarnowska",
     "home": "Łęgovia II Łęg Tarnowski",
-    "date": "2 września, 17:00"
+    "date": "2 września, 17:30"
    },
    {
-    "score": "-",
+    "score": "2-2",
     "away": "Orzeł Miechowice Małe",
     "home": "Powiśle Bolesław",
     "date": "3 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "3-1",
     "away": "LKS Smęgorzów",
     "home": "LZS Wójcina",
     "date": "3 września, 11:00"
@@ -187,49 +186,49 @@ const LEAGUE_SCHEDULE = {
     "score": "-",
     "away": "Powiśle Bolesław",
     "home": "DTS Dąbrowa Tarnowska",
-    "date": ""
+    "date": "10 września, 11:00"
    },
    {
     "score": "-",
     "away": "Łęgovia II Łęg Tarnowski",
     "home": "Wisła Borusowa",
-    "date": ""
+    "date": "10 września, 17:00"
    },
    {
     "score": "-",
     "away": "Olimpia Biskupice Radłowskie",
     "home": "LZS Mędrzechów",
-    "date": ""
+    "date": "10 września, 15:00"
    },
    {
     "score": "-",
     "away": "LZS Olesno",
     "home": "LZS Wójcina",
-    "date": ""
+    "date": "9 września, 16:00"
    },
    {
     "score": "-",
     "away": "LKS Smęgorzów",
     "home": "Spartakus Radgoszcz",
-    "date": ""
+    "date": "10 września, 11:00"
    },
    {
     "score": "-",
     "away": "Kłos Słupiec",
     "home": "Brzoza Brzezówka",
-    "date": ""
+    "date": "9 września, 17:00"
    },
    {
     "score": "-",
     "away": "Dąbrovia II Dąbrowa Tarnowska",
     "home": "Dunajec Ujście Jezuickie",
-    "date": ""
+    "date": "10 września, 11:00"
    },
    {
     "score": "-",
     "away": "MLKS II Żabno",
     "home": "Polonia Kłyż",
-    "date": ""
+    "date": "10 września, 17:00"
    },
    {
     "score": "-",
