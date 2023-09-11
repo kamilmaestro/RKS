@@ -4,18 +4,18 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { Icon } from '@mui/material';
 import ColoredText from "../components/ColoredText/ColoredText";
 import { useMediaQuery, useTheme } from '@mui/material';
-import { getNearestMatch, getOnlyRksSchedule } from '../data/scheduleData';
+import { getNearestMatch } from '../data/leagueScheduleData';
 
 const NextMatch = () => {
 
   const [nextMatch, setNextMatch] = useState(null);
 
-  const nextMatchStatic = {
-    date: "10 września, 11:00",
-    home: "RKS Radgoszcz",
-    away: "LKS Smęgorzów",
-    score: " vs "
-   }
+  // const nextMatchStatic = {
+  //   date: "10 września, 11:00",
+  //   home: "RKS Radgoszcz",
+  //   away: "LKS Smęgorzów",
+  //   score: " vs "
+  //  }
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
@@ -23,11 +23,17 @@ const NextMatch = () => {
   useEffect(() => {
     const fetchedData = getNearestMatch();
     setNextMatch(fetchedData);
-    console.log(fetchedData)
   }, []); 
 
   if (!nextMatch) {
     return <></>
+  }
+
+  const formatScore = (score) => {
+    if (!score || score.trim() === "-") {
+      score = "vs";
+    }
+    return score
   }
 
   return ( 
@@ -44,7 +50,7 @@ const NextMatch = () => {
             component="div" 
             color="white"
           >
-            {nextMatchStatic.home}  <ColoredText style={{marginLeft: 15, marginRight: 15}} >{ nextMatchStatic.score }</ColoredText> {nextMatchStatic.away}
+            {nextMatch.home}  <ColoredText style={{marginLeft: 15, marginRight: 15}} >{ formatScore(nextMatch.score) }</ColoredText> {nextMatch.away}
           </Typography>
         </div>
         <div style={{ 
@@ -54,7 +60,7 @@ const NextMatch = () => {
             <CalendarMonthIcon fontSize="small"/>
           </Icon>
           <Typography sx={{ fontSize: isSmallScreen ? 14 : 16, marginTop: 2, marginLeft: isSmallScreen ? 0 : 1, fontWeight: 300, fontStyle: 'italic'  }} color="white" gutterBottom>
-            {nextMatchStatic.date}
+            {nextMatch.date}
           </Typography>
         </div>
       </div>

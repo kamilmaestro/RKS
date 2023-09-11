@@ -28,7 +28,6 @@ const SingularMatches = ({ schedule = [] }) => {
         break;
       }
     }
-    console.log(lastMatchWithScore)
 
     return lastMatchWithScore.round - 1
   }

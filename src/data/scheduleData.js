@@ -12,7 +12,6 @@ export const getNearestMatch = () => {
   let nearestMatch = null;
   let nearestDifference = Infinity;
   const matches = getOnlyRksSchedule()
-  console.log(matches)
 
   for (const match of matches) {
     const matchDate = parsePolishDate(match.match);

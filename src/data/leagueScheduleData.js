@@ -7,7 +7,77 @@ export const getRKSSchedule = () => {
         } else {
           return { ...fix, away: "RKS Radgoszcz", round: idx + 1 }
         }
-    });
+    })
+    .map((fix, idx) => {
+      const [dayWithMonthString, time] = fix.date.split(', ');
+      const [day, month] = dayWithMonthString.split(' ');
+      if (months[month] >= 7 && months[month] <= 11) {
+        return { ...fix, year: LEAGUE_SCHEDULE.start }
+      } else {
+        return { ...fix, year: LEAGUE_SCHEDULE.end }
+      }
+    })
+}
+
+export const getNearestMatch = () => {
+  const currentDate = new Date();
+  let nearestMatch = null;
+  let nearestDifference = Infinity;
+  const matches = getRKSSchedule()
+    .filter(match => match.date)
+
+  for (const match of matches) {
+    const matchDate = parsePolishDate(match);
+    const timeDifference = Math.abs(matchDate - currentDate);
+
+    if (timeDifference < nearestDifference && matchDate > currentDate) {
+      nearestMatch = match;
+      nearestDifference = timeDifference;
+    }
+  }
+
+  if (!nearestMatch) {
+    for (const match of matches) {
+      const matchDate = parsePolishDate(match);
+      const timeDifference = Math.abs(matchDate - currentDate);
+      if (timeDifference < nearestDifference) {
+        nearestMatch = match;
+        nearestDifference = timeDifference;
+      }
+    }
+  }
+
+  return nearestMatch;
+}
+
+const months = {
+  stycznia: 0, // January
+  lutego: 1, // February
+  marca: 2, // March
+  kwietnia: 3, // April
+  maja: 4, // May
+  czerwca: 5, // June
+  lipca: 6, // July
+  sierpnia: 7, // August
+  września: 8, // September
+  października: 9, // October
+  listopada: 10, // November
+  grudnia: 11, // December
+};
+
+const parsePolishDate = (match) => {
+  const dateString = match.date
+  const [dayWithMonthString, time] = dateString.split(', ');
+  const [day, month] = dayWithMonthString.split(' ');
+
+  const matchDate = new Date();
+  matchDate.setHours(parseInt(time.split(':')[0], 10));
+  matchDate.setMinutes(parseInt(time.split(':')[1], 10));
+  matchDate.setDate(parseInt(day, 10));
+  matchDate.setMonth(months[month]);
+  matchDate.setFullYear(match.year);
+
+  return matchDate;
 }
 
 const LEAGUE_SCHEDULE = {
@@ -183,49 +253,49 @@ const LEAGUE_SCHEDULE = {
     "date": ""
    },
    {
-    "score": "-",
+    "score": "0-6",
     "away": "Powiśle Bolesław",
     "home": "DTS Dąbrowa Tarnowska",
     "date": "10 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "5-2",
     "away": "Łęgovia II Łęg Tarnowski",
     "home": "Wisła Borusowa",
     "date": "10 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "0-2",
     "away": "Olimpia Biskupice Radłowskie",
     "home": "LZS Mędrzechów",
     "date": "10 września, 15:00"
    },
    {
-    "score": "-",
+    "score": "0-2",
     "away": "LZS Olesno",
     "home": "LZS Wójcina",
     "date": "9 września, 16:00"
    },
    {
-    "score": "-",
+    "score": "4-1",
     "away": "LKS Smęgorzów",
     "home": "Spartakus Radgoszcz",
     "date": "10 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "3-1",
     "away": "Kłos Słupiec",
     "home": "Brzoza Brzezówka",
     "date": "9 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "4-0",
     "away": "Dąbrovia II Dąbrowa Tarnowska",
     "home": "Dunajec Ujście Jezuickie",
     "date": "10 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "1-8",
     "away": "MLKS II Żabno",
     "home": "Polonia Kłyż",
     "date": "10 września, 17:00"
@@ -240,49 +310,49 @@ const LEAGUE_SCHEDULE = {
     "score": "-",
     "away": "Polonia Kłyż",
     "home": "Dąbrovia II Dąbrowa Tarnowska",
-    "date": ""
+    "date": "17 września, 16:00"
    },
    {
     "score": "-",
     "away": "Dunajec Ujście Jezuickie",
     "home": "Kłos Słupiec",
-    "date": ""
+    "date": "17 września, 14:00"
    },
    {
     "score": "-",
     "away": "Brzoza Brzezówka",
     "home": "LKS Smęgorzów",
-    "date": ""
+    "date": "17 września, 17:00"
    },
    {
     "score": "-",
     "away": "Spartakus Radgoszcz",
     "home": "LZS Olesno",
-    "date": ""
+    "date": "17 września, 11:00"
    },
    {
     "score": "-",
     "away": "LZS Wójcina",
     "home": "Olimpia Biskupice Radłowskie",
-    "date": ""
+    "date": "17 września, 11:00"
    },
    {
     "score": "-",
     "away": "LZS Mędrzechów",
     "home": "Łęgovia II Łęg Tarnowski",
-    "date": ""
+    "date": "16 września, 17:00"
    },
    {
     "score": "-",
     "away": "Wisła Borusowa",
     "home": "Powiśle Bolesław",
-    "date": ""
+    "date": "16 września, 17:00"
    },
    {
     "score": "-",
     "away": "DTS Dąbrowa Tarnowska",
     "home": "Orzeł Miechowice Małe",
-    "date": ""
+    "date": "16 września, 17:00"
    },
    {
     "score": "-",
