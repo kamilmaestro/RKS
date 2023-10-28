@@ -12,7 +12,7 @@ import {theme} from "../../themes/theme";
 const Layout = ({title, children}) => {
     return (
         <>
-            <SEO title={title}/>
+            <SEO />
             <GlobalStyles/>
             <ThemeProvider theme={theme}>
                 <StyledPage>

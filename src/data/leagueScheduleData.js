@@ -85,12 +85,6 @@ const LEAGUE_SCHEDULE = {
   "end": 2024,
   "fixture": [
    {
-    "score": "-",
-    "away": "---",
-    "home": "Dunajec Ujście Jezuickie",
-    "date": ""
-   },
-   {
     "score": "3-1",
     "away": "Brzoza Brzezówka",
     "home": "Polonia Kłyż",
@@ -137,12 +131,6 @@ const LEAGUE_SCHEDULE = {
     "away": "Powiśle Bolesław",
     "home": "Łęgovia II Łęg Tarnowski",
     "date": "19 sierpnia, 17:00"
-   },
-   {
-    "score": "-",
-    "away": "Powiśle Bolesław",
-    "home": "---",
-    "date": ""
    },
    {
     "score": "5-0",
@@ -193,12 +181,6 @@ const LEAGUE_SCHEDULE = {
     "date": "27 sierpnia, 11:00"
    },
    {
-    "score": "-",
-    "away": "---",
-    "home": "Polonia Kłyż",
-    "date": ""
-   },
-   {
     "score": "3-1",
     "away": "Dunajec Ujście Jezuickie",
     "home": "MLKS II Żabno",
@@ -245,12 +227,6 @@ const LEAGUE_SCHEDULE = {
     "away": "LKS Smęgorzów",
     "home": "LZS Wójcina",
     "date": "3 września, 11:00"
-   },
-   {
-    "score": "-",
-    "away": "Orzeł Miechowice Małe",
-    "home": "---",
-    "date": ""
    },
    {
     "score": "0-6",
@@ -302,333 +278,291 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "---",
-    "home": "MLKS II Żabno",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "Polonia Kłyż",
     "home": "Dąbrovia II Dąbrowa Tarnowska",
-    "date": "17 września, 16:00"
+    "date": "19 listopada, 13:30"
    },
    {
-    "score": "-",
+    "score": "2-2",
     "away": "Dunajec Ujście Jezuickie",
     "home": "Kłos Słupiec",
     "date": "17 września, 14:00"
    },
    {
-    "score": "-",
+    "score": "4-3",
     "away": "Brzoza Brzezówka",
     "home": "LKS Smęgorzów",
     "date": "17 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "1-3",
     "away": "Spartakus Radgoszcz",
     "home": "LZS Olesno",
     "date": "17 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "1-2",
     "away": "LZS Wójcina",
     "home": "Olimpia Biskupice Radłowskie",
     "date": "17 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "3-0",
     "away": "LZS Mędrzechów",
     "home": "Łęgovia II Łęg Tarnowski",
     "date": "16 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "1-3",
     "away": "Wisła Borusowa",
     "home": "Powiśle Bolesław",
     "date": "16 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "2-2",
     "away": "DTS Dąbrowa Tarnowska",
     "home": "Orzeł Miechowice Małe",
     "date": "16 września, 17:00"
    },
    {
-    "score": "-",
-    "away": "DTS Dąbrowa Tarnowska",
-    "home": "---",
-    "date": ""
-   },
-   {
-    "score": "-",
+    "score": "2-3",
     "away": "Orzeł Miechowice Małe",
     "home": "Wisła Borusowa",
-    "date": ""
+    "date": "24 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "1-7",
     "away": "Powiśle Bolesław",
     "home": "LZS Mędrzechów",
-    "date": ""
+    "date": "24 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "3-1",
     "away": "Łęgovia II Łęg Tarnowski",
     "home": "LZS Wójcina",
-    "date": ""
+    "date": "23 września, 16:00"
    },
    {
-    "score": "-",
+    "score": "2-0",
     "away": "Olimpia Biskupice Radłowskie",
     "home": "Spartakus Radgoszcz",
-    "date": ""
+    "date": "23 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "2-1",
     "away": "LZS Olesno",
     "home": "Brzoza Brzezówka",
-    "date": ""
+    "date": "23 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "1-2",
     "away": "LKS Smęgorzów",
     "home": "Dunajec Ujście Jezuickie",
-    "date": ""
+    "date": "24 września, 11:00"
    },
    {
-    "score": "-",
+    "score": "4-7",
     "away": "Kłos Słupiec",
     "home": "Polonia Kłyż",
-    "date": ""
+    "date": "24 września, 17:00"
    },
    {
-    "score": "-",
+    "score": "5-2",
     "away": "Dąbrovia II Dąbrowa Tarnowska",
     "home": "MLKS II Żabno",
-    "date": ""
+    "date": "24 września, 11:00"
    },
    {
-    "score": "-",
-    "away": "---",
-    "home": "Dąbrovia II Dąbrowa Tarnowska",
-    "date": ""
-   },
-   {
-    "score": "-",
+    "score": "2-3",
     "away": "MLKS II Żabno",
     "home": "Kłos Słupiec",
-    "date": ""
+    "date": "1 października, 14:00"
    },
    {
-    "score": "-",
+    "score": "6-1",
     "away": "Polonia Kłyż",
     "home": "LKS Smęgorzów",
-    "date": ""
+    "date": "1 października, 16:45"
    },
    {
-    "score": "-",
+    "score": "3-1",
     "away": "Dunajec Ujście Jezuickie",
     "home": "LZS Olesno",
-    "date": ""
+    "date": "1 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "2-7",
     "away": "Brzoza Brzezówka",
     "home": "Olimpia Biskupice Radłowskie",
-    "date": ""
+    "date": "1 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "1-6",
     "away": "Spartakus Radgoszcz",
     "home": "Łęgovia II Łęg Tarnowski",
-    "date": ""
+    "date": "1 października, 14:00"
    },
    {
-    "score": "-",
+    "score": "5-1",
     "away": "LZS Wójcina",
     "home": "Powiśle Bolesław",
-    "date": ""
+    "date": "1 października, 14:00"
    },
    {
-    "score": "-",
+    "score": "1-3",
     "away": "LZS Mędrzechów",
     "home": "Orzeł Miechowice Małe",
-    "date": ""
+    "date": "1 października, 14:00"
    },
    {
-    "score": "-",
+    "score": "1-3",
     "away": "Wisła Borusowa",
     "home": "DTS Dąbrowa Tarnowska",
-    "date": ""
+    "date": "1 października, 11:00"
    },
    {
-    "score": "-",
-    "away": "Wisła Borusowa",
-    "home": "---",
-    "date": ""
-   },
-   {
-    "score": "-",
+    "score": "1-1",
     "away": "DTS Dąbrowa Tarnowska",
     "home": "LZS Mędrzechów",
-    "date": ""
+    "date": "7 października, 16:00"
    },
    {
-    "score": "-",
+    "score": "2-1",
     "away": "Orzeł Miechowice Małe",
     "home": "LZS Wójcina",
-    "date": ""
+    "date": "8 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "4-0",
     "away": "Powiśle Bolesław",
     "home": "Spartakus Radgoszcz",
-    "date": ""
+    "date": "8 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "3-1",
     "away": "Łęgovia II Łęg Tarnowski",
     "home": "Brzoza Brzezówka",
-    "date": ""
+    "date": "7 października, 16:30"
    },
    {
-    "score": "-",
+    "score": "0-0",
     "away": "Olimpia Biskupice Radłowskie",
     "home": "Dunajec Ujście Jezuickie",
-    "date": ""
+    "date": "8 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "1-6",
     "away": "LZS Olesno",
     "home": "Polonia Kłyż",
-    "date": ""
+    "date": "8 października, 14:00"
    },
    {
-    "score": "-",
+    "score": "1-1",
     "away": "LKS Smęgorzów",
     "home": "MLKS II Żabno",
-    "date": ""
+    "date": "8 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "6-1",
     "away": "Kłos Słupiec",
     "home": "Dąbrovia II Dąbrowa Tarnowska",
-    "date": ""
+    "date": "8 października, 15:30"
    },
    {
-    "score": "-",
-    "away": "---",
-    "home": "Kłos Słupiec",
-    "date": ""
-   },
-   {
-    "score": "-",
+    "score": "4-1",
     "away": "Dąbrovia II Dąbrowa Tarnowska",
     "home": "LKS Smęgorzów",
-    "date": ""
+    "date": "15 października, 16:00"
    },
    {
-    "score": "-",
+    "score": "1-1",
     "away": "MLKS II Żabno",
     "home": "LZS Olesno",
-    "date": ""
+    "date": "15 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "1-4",
     "away": "Polonia Kłyż",
     "home": "Olimpia Biskupice Radłowskie",
-    "date": ""
+    "date": "15 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "0-2",
     "away": "Dunajec Ujście Jezuickie",
     "home": "Łęgovia II Łęg Tarnowski",
-    "date": ""
+    "date": "14 października, 16:00"
    },
    {
-    "score": "-",
+    "score": "1-4",
     "away": "Brzoza Brzezówka",
     "home": "Powiśle Bolesław",
-    "date": ""
+    "date": "15 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "1-7",
     "away": "Spartakus Radgoszcz",
     "home": "Orzeł Miechowice Małe",
-    "date": ""
+    "date": "15 października, 14:00"
    },
    {
-    "score": "-",
+    "score": "0-5",
     "away": "LZS Wójcina",
     "home": "DTS Dąbrowa Tarnowska",
-    "date": ""
+    "date": "15 października, 11:00"
    },
    {
-    "score": "-",
+    "score": "3-0",
     "away": "LZS Mędrzechów",
     "home": "Wisła Borusowa",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "LZS Mędrzechów",
-    "home": "---",
-    "date": ""
+    "date": "15 października, 11:00"
    },
    {
     "score": "-",
     "away": "Wisła Borusowa",
     "home": "LZS Wójcina",
-    "date": ""
+    "date": "21 października, 15:00"
    },
    {
     "score": "-",
     "away": "DTS Dąbrowa Tarnowska",
     "home": "Spartakus Radgoszcz",
-    "date": ""
+    "date": "22 października, 11:00"
    },
    {
     "score": "-",
     "away": "Orzeł Miechowice Małe",
     "home": "Brzoza Brzezówka",
-    "date": ""
+    "date": "21 października, 16:00"
    },
    {
     "score": "-",
     "away": "Powiśle Bolesław",
     "home": "Dunajec Ujście Jezuickie",
-    "date": ""
+    "date": "22 października, 11:00"
    },
    {
     "score": "-",
     "away": "Łęgovia II Łęg Tarnowski",
     "home": "Polonia Kłyż",
-    "date": ""
+    "date": "22 października, 11:00"
    },
    {
     "score": "-",
     "away": "Olimpia Biskupice Radłowskie",
     "home": "MLKS II Żabno",
-    "date": ""
+    "date": "22 października, 11:00"
    },
    {
     "score": "-",
     "away": "LZS Olesno",
     "home": "Dąbrovia II Dąbrowa Tarnowska",
-    "date": ""
+    "date": "22 października, 15:00"
    },
    {
     "score": "-",
     "away": "LKS Smęgorzów",
     "home": "Kłos Słupiec",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "---",
-    "home": "LKS Smęgorzów",
-    "date": ""
+    "date": "22 października, 14:00"
    },
    {
     "score": "-",
@@ -676,12 +610,6 @@ const LEAGUE_SCHEDULE = {
     "score": "-",
     "away": "LZS Wójcina",
     "home": "LZS Mędrzechów",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "LZS Wójcina",
-    "home": "---",
     "date": ""
    },
    {
@@ -734,12 +662,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "---",
-    "home": "LZS Olesno",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "LKS Smęgorzów",
     "home": "Olimpia Biskupice Radłowskie",
     "date": ""
@@ -784,12 +706,6 @@ const LEAGUE_SCHEDULE = {
     "score": "-",
     "away": "Spartakus Radgoszcz",
     "home": "LZS Wójcina",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "Spartakus Radgoszcz",
-    "home": "---",
     "date": ""
    },
    {
@@ -842,12 +758,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "---",
-    "home": "Olimpia Biskupice Radłowskie",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "LZS Olesno",
     "home": "Łęgovia II Łęg Tarnowski",
     "date": ""
@@ -892,12 +802,6 @@ const LEAGUE_SCHEDULE = {
     "score": "-",
     "away": "Brzoza Brzezówka",
     "home": "Spartakus Radgoszcz",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "Brzoza Brzezówka",
-    "home": "---",
     "date": ""
    },
    {
@@ -950,12 +854,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "---",
-    "home": "Łęgovia II Łęg Tarnowski",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "Olimpia Biskupice Radłowskie",
     "home": "Powiśle Bolesław",
     "date": ""
@@ -1000,12 +898,6 @@ const LEAGUE_SCHEDULE = {
     "score": "-",
     "away": "Dunajec Ujście Jezuickie",
     "home": "Brzoza Brzezówka",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "Dunajec Ujście Jezuickie",
-    "home": "---",
     "date": ""
    },
    {
@@ -1053,12 +945,6 @@ const LEAGUE_SCHEDULE = {
    {
     "score": "-",
     "away": "Łęgovia II Łęg Tarnowski",
-    "home": "Powiśle Bolesław",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "---",
     "home": "Powiśle Bolesław",
     "date": ""
    },
@@ -1118,12 +1004,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "Polonia Kłyż",
-    "home": "---",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "MLKS II Żabno",
     "home": "Dunajec Ujście Jezuickie",
     "date": ""
@@ -1161,12 +1041,6 @@ const LEAGUE_SCHEDULE = {
    {
     "score": "-",
     "away": "Powiśle Bolesław",
-    "home": "Orzeł Miechowice Małe",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "---",
     "home": "Orzeł Miechowice Małe",
     "date": ""
    },
@@ -1220,12 +1094,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "MLKS II Żabno",
-    "home": "---",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "Dąbrovia II Dąbrowa Tarnowska",
     "home": "Polonia Kłyż",
     "date": ""
@@ -1269,12 +1137,6 @@ const LEAGUE_SCHEDULE = {
    {
     "score": "-",
     "away": "Orzeł Miechowice Małe",
-    "home": "DTS Dąbrowa Tarnowska",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "---",
     "home": "DTS Dąbrowa Tarnowska",
     "date": ""
    },
@@ -1328,12 +1190,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "Dąbrovia II Dąbrowa Tarnowska",
-    "home": "---",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "Kłos Słupiec",
     "home": "MLKS II Żabno",
     "date": ""
@@ -1377,12 +1233,6 @@ const LEAGUE_SCHEDULE = {
    {
     "score": "-",
     "away": "DTS Dąbrowa Tarnowska",
-    "home": "Wisła Borusowa",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "---",
     "home": "Wisła Borusowa",
     "date": ""
    },
@@ -1436,12 +1286,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "Kłos Słupiec",
-    "home": "---",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "LKS Smęgorzów",
     "home": "Dąbrovia II Dąbrowa Tarnowska",
     "date": ""
@@ -1485,12 +1329,6 @@ const LEAGUE_SCHEDULE = {
    {
     "score": "-",
     "away": "Wisła Borusowa",
-    "home": "LZS Mędrzechów",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "---",
     "home": "LZS Mędrzechów",
     "date": ""
    },
@@ -1544,12 +1382,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "LKS Smęgorzów",
-    "home": "---",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "LZS Olesno",
     "home": "Kłos Słupiec",
     "date": ""
@@ -1593,12 +1425,6 @@ const LEAGUE_SCHEDULE = {
    {
     "score": "-",
     "away": "LZS Mędrzechów",
-    "home": "LZS Wójcina",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "---",
     "home": "LZS Wójcina",
     "date": ""
    },
@@ -1652,12 +1478,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "LZS Olesno",
-    "home": "---",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "Olimpia Biskupice Radłowskie",
     "home": "LKS Smęgorzów",
     "date": ""
@@ -1701,12 +1521,6 @@ const LEAGUE_SCHEDULE = {
    {
     "score": "-",
     "away": "LZS Wójcina",
-    "home": "Spartakus Radgoszcz",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "---",
     "home": "Spartakus Radgoszcz",
     "date": ""
    },
@@ -1760,12 +1574,6 @@ const LEAGUE_SCHEDULE = {
    },
    {
     "score": "-",
-    "away": "Olimpia Biskupice Radłowskie",
-    "home": "---",
-    "date": ""
-   },
-   {
-    "score": "-",
     "away": "Łęgovia II Łęg Tarnowski",
     "home": "LZS Olesno",
     "date": ""
@@ -1809,12 +1617,6 @@ const LEAGUE_SCHEDULE = {
    {
     "score": "-",
     "away": "Spartakus Radgoszcz",
-    "home": "Brzoza Brzezówka",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "---",
     "home": "Brzoza Brzezówka",
     "date": ""
    },
@@ -1864,12 +1666,6 @@ const LEAGUE_SCHEDULE = {
     "score": "-",
     "away": "Olimpia Biskupice Radłowskie",
     "home": "Łęgovia II Łęg Tarnowski",
-    "date": ""
-   },
-   {
-    "score": "-",
-    "away": "Łęgovia II Łęg Tarnowski",
-    "home": "---",
     "date": ""
    },
    {
