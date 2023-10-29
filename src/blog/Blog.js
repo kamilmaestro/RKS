@@ -14,17 +14,17 @@ const Blog = () => {
     const getArticles = async () => {
       const articlesRef = collection(db, 'articles');
       await getDocs(articlesRef).then((data) => {
-          let articlesData = data.docs
-            .map((doc) => ({
-              id: doc.id,
-              ...doc.data(),
-            }));
-          const sortedArticles = articlesData.sort((a, b) => b.createdAt - a.createdAt);
-          setArticles(sortedArticles)
-        }).catch((err) => {
-          console.log(err);
-        })
-      }
+        let articlesData = data.docs
+          .map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+        const sortedArticles = articlesData.sort((a, b) => b.createdAt - a.createdAt);
+        setArticles(sortedArticles)
+      }).catch((err) => {
+        console.log(err);
+      })
+    }
       getArticles()
     }, [])
 

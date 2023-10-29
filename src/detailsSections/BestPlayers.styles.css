@@ -1,0 +1,20 @@
+.playerTablesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1000px) {
+  .playerTablesContainer {
+    flex-direction: row;
+  }
+
+  .playerTablesContainer > div {
+    flex: 1;
+    margin-right: 60px;
+    min-width: 400px;
+  }
+
+  .playerTablesContainer > div:last-child {
+    margin-right: 0;
+  }
+}

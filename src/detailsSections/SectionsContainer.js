@@ -1,10 +1,10 @@
 import React from 'react';
-import BestScorers from './BestScorers';
+import Statistics from './Statistics';
 
 const SectionsContainer = () => {
   return (
     <div>
-      <BestScorers/>
+      <Statistics/>
     </div>
   );
 };
