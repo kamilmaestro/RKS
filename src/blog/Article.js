@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import { ToDoContainer, ToDoTitle } from "../pages/ToDo/ToDo.styles";
-import { useLocation } from 'react-router-dom';
 import ContentRenderer from "./ContentRenderer";
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';

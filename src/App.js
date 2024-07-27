@@ -8,6 +8,7 @@ import TeamSquad from "./teamSquad/TeamSquad";
 import StadiumLocation from "./location/StadiumLocation";
 import Blog from "./blog/Blog";
 import Article from "./blog/Article";
+import AdminPanel from './pages/admin/AdminPanel';
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                 <Route exact path={'/competitions'} component={Competitions}/>
                 <Route exact path={'/squad'} component={TeamSquad}/>
                 <Route exact path={'/contact'} component={StadiumLocation}/>
+                <Route path="/admin" component={AdminPanel} />
                 <Route exact path={'*'} component={NotFound}/>
             </Switch>
         </BrowserRouter>
